@@ -1,0 +1,16 @@
+{
+  "name": "qramana-playground",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@akashic/akashic-cli-scan": "~0.2.6",
+    "@akashic/akashic-engine": "~2.4.11",
+    "@akashic/akashic-sandbox": "~0.13.55"
+  },
+  "dependencies": {
+    "@qramana/qramana": "0.0.4"
+  }
+}
