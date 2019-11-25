@@ -5,7 +5,8 @@ class CardDeck {
         this.cards = cards;
     }
     static initDeck() {
-        let marks = ['spade', 'diamond', 'clover', 'heart'];
+        // let marks = ['spade', 'diamond', 'clover', 'heart'];
+        let marks = ['spade'];
         var _cards = [];
         for (var i = 0; i < marks.length; i++) {
             for (let j = 0; j < 13; j++) {

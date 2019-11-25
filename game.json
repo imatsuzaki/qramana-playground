@@ -9,88 +9,82 @@
 			"path": "main.js",
 			"global": true
 		},
-		"spade_cards": {
-			"type": "image",
-			"width": 4956,
-			"height": 600,
-			"path": "image/spade_cards.png"
-		},
 		"card_spade_1": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_1.png"
 		},
 		"card_spade_10": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_10.png"
 		},
 		"card_spade_11": {
 			"type": "image",
-			"width": 545,
-			"height": 800,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_11.png"
 		},
 		"card_spade_12": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_12.png"
 		},
 		"card_spade_13": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_13.png"
 		},
 		"card_spade_2": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_2.png"
 		},
 		"card_spade_3": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_3.png"
 		},
 		"card_spade_4": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_4.png"
 		},
 		"card_spade_5": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_5.png"
 		},
 		"card_spade_6": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_6.png"
 		},
 		"card_spade_7": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_7.png"
 		},
 		"card_spade_8": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_8.png"
 		},
 		"card_spade_9": {
 			"type": "image",
-			"width": 409,
-			"height": 600,
+			"width": 113,
+			"height": 166,
 			"path": "image/card_spade_9.png"
 		},
 		"Card": {
