@@ -12,79 +12,79 @@
 		"card_spade_1": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_1.png"
 		},
 		"card_spade_10": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_10.png"
 		},
 		"card_spade_11": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_11.png"
 		},
 		"card_spade_12": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_12.png"
 		},
 		"card_spade_13": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_13.png"
 		},
 		"card_spade_2": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_2.png"
 		},
 		"card_spade_3": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_3.png"
 		},
 		"card_spade_4": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_4.png"
 		},
 		"card_spade_5": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_5.png"
 		},
 		"card_spade_6": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_6.png"
 		},
 		"card_spade_7": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_7.png"
 		},
 		"card_spade_8": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_8.png"
 		},
 		"card_spade_9": {
 			"type": "image",
 			"width": 113,
-			"height": 166,
+			"height": 167,
 			"path": "image/card_spade_9.png"
 		},
 		"Card": {
@@ -96,6 +96,240 @@
 			"type": "script",
 			"path": "script/CardDeck.js",
 			"global": true
+		},
+		"card_club_10": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_10.png"
+		},
+		"card_club_11": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_11.png"
+		},
+		"card_club_12": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_12.png"
+		},
+		"card_club_13": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_13.png"
+		},
+		"card_diamond_10": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_10.png"
+		},
+		"card_diamond_11": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_11.png"
+		},
+		"card_diamond_12": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_12.png"
+		},
+		"card_diamond_13": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_13.png"
+		},
+		"card_heart_10": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_10.png"
+		},
+		"card_heart_11": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_11.png"
+		},
+		"card_heart_12": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_12.png"
+		},
+		"card_heart_13": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_13.png"
+		},
+		"card_club_1": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_1.png"
+		},
+		"card_club_2": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_2.png"
+		},
+		"card_club_3": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_3.png"
+		},
+		"card_club_4": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_4.png"
+		},
+		"card_club_5": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_5.png"
+		},
+		"card_club_6": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_6.png"
+		},
+		"card_club_7": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_7.png"
+		},
+		"card_club_8": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_8.png"
+		},
+		"card_club_9": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_club_9.png"
+		},
+		"card_diamond_1": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_1.png"
+		},
+		"card_diamond_2": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_2.png"
+		},
+		"card_diamond_3": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_3.png"
+		},
+		"card_diamond_4": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_4.png"
+		},
+		"card_diamond_5": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_5.png"
+		},
+		"card_diamond_6": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_6.png"
+		},
+		"card_diamond_7": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_7.png"
+		},
+		"card_diamond_8": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_8.png"
+		},
+		"card_diamond_9": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_diamond_9.png"
+		},
+		"card_heart_1": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_1.png"
+		},
+		"card_heart_2": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_2.png"
+		},
+		"card_heart_3": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_3.png"
+		},
+		"card_heart_4": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_4.png"
+		},
+		"card_heart_5": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_5.png"
+		},
+		"card_heart_6": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_6.png"
+		},
+		"card_heart_7": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_7.png"
+		},
+		"card_heart_8": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_8.png"
+		},
+		"card_heart_9": {
+			"type": "image",
+			"width": 113,
+			"height": 166,
+			"path": "image/card_heart_9.png"
 		}
 	},
 	"environment": {
