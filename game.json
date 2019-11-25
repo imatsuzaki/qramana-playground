@@ -9,12 +9,6 @@
 			"path": "main.js",
 			"global": true
 		},
-		"switch": {
-			"type": "image",
-			"width": 96,
-			"height": 48,
-			"path": "image/switch.png"
-		},
 		"spade_cards": {
 			"type": "image",
 			"width": 4956,
@@ -98,9 +92,42 @@
 			"width": 409,
 			"height": 600,
 			"path": "image/card_spade_9.png"
+		},
+		"Card": {
+			"type": "script",
+			"path": "script/Card.js",
+			"global": true
+		},
+		"CardDeck": {
+			"type": "script",
+			"path": "script/CardDeck.js",
+			"global": true
 		}
 	},
 	"environment": {
 		"sandbox-runtime": "2"
+	},
+	"globalScripts": [
+		"node_modules/@qramana/qramana-common-types/lib/QuantumState.js",
+		"node_modules/@qramana/qramana-common-types/lib/index.js",
+		"node_modules/@qramana/qramana/lib/Core.js",
+		"node_modules/@qramana/qramana/lib/QuantumStateImpl/QuantumStateJsqubits.js",
+		"node_modules/@qramana/qramana/lib/Qubit.js",
+		"node_modules/@qramana/qramana/lib/index.js",
+		"node_modules/@qramana/qramana/lib/methods.js",
+		"node_modules/@qramana/qramana/lib/types.js",
+		"node_modules/jsqubits/dist/commonjs/Complex.js",
+		"node_modules/jsqubits/dist/commonjs/Measurement.js",
+		"node_modules/jsqubits/dist/commonjs/QMath.js",
+		"node_modules/jsqubits/dist/commonjs/QState.js",
+		"node_modules/jsqubits/dist/commonjs/constants.js",
+		"node_modules/jsqubits/dist/commonjs/index.js",
+		"node_modules/jsqubits/dist/commonjs/utils/typecheck.js",
+		"node_modules/jsqubits/dist/commonjs/utils/validateArgs.js"
+	],
+	"moduleMainScripts": {
+		"@qramana/qramana-common-types": "node_modules/@qramana/qramana-common-types/lib/index.js",
+		"@qramana/qramana": "node_modules/@qramana/qramana/lib/index.js",
+		"jsqubits": "node_modules/jsqubits/dist/commonjs/index.js"
 	}
 }
