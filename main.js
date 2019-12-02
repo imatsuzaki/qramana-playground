@@ -69,16 +69,37 @@ function main() {
     );
 
     scene.loaded.add(function () {
+        let card_sprites = [];
         for (let i = 0; i < fieldCards.length; i++) {
             let card = createFieldCards(fieldCards[i], scene, deck, 5 + i * 120, 5);
-            scene.append(card);
+            card_sprites.push(card);
+            // scene.append(card);
         }
+
+        for (let i = 0; i < card_sprites.length; i++) {
+            scene.append(card_sprites[i]);
+        }
+
+        var rect = new g.FilledRect({
+            scene: scene,
+            x: 500,
+            y: 400,
+            width: 30,
+            height: 30,
+            cssColor: "blue"
+        });
+        rect.touchable = true;
+        rect.pointDown.add(function () {
+            rect.cssColor = "red";
+            rect.modified();
+            exchangeCard(card_sprites, fieldCards, scene, deck);
+        });
+        scene.append(rect);
     });
     g.game.pushScene(scene);
 }
 
 function createFieldCards(card, scene, deck, x, y) {
-    console.log(card.viewAsCard());
     const c = new g.Sprite({
         scene: scene,
         src: scene.assets[card.viewAsCard()],
@@ -86,14 +107,32 @@ function createFieldCards(card, scene, deck, x, y) {
         x: x,
         y: y,
     });
-    console.log(c);
-    c.pointDown.add(() => {
-        let next_card = deck.getFirstCard();
-        c.surface = g.Util.asSurface(scene.assets[next_card.viewAsCard()]);
-        c.modified();
+    c.pointDown.add((ev) => {
+        card.willExchange();
+        scene.append(rect);
     });
     return c
 }
 
+function getAllIndexes(arr) {
+    console.log(arr);
+    var indexes = [], i;
+    for (i = 0; i < arr.length; i++)
+        if (arr[i].exchange)
+            indexes.push(i);
+    return indexes;
+}
+
+
+function exchangeCard(cardSprites, fieldCards, scene, deck) {
+    let exchange_index = getAllIndexes(fieldCards);
+
+    for (let i = 0; i < exchange_index.length; i++) {
+        let ind = exchange_index[i];
+        var c = cardSprites[ind];
+        c.surface = g.Util.asSurface(scene.assets[deck.getFirstCard().viewAsCard()]);
+        c.modified();
+    }
+}
 
 module.exports = main;
