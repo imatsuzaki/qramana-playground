@@ -100,6 +100,8 @@ function main() {
 }
 
 function createFieldCards(card, scene, deck, x, y) {
+
+    var group = new g.E({scene: scene});
     const c = new g.Sprite({
         scene: scene,
         src: scene.assets[card.viewAsCard()],
@@ -107,10 +109,20 @@ function createFieldCards(card, scene, deck, x, y) {
         x: x,
         y: y,
     });
+    group.append(c);
+    const mark = new g.FilledRect({
+        scene: scene,
+            x: x,
+            y: y,
+            width: 113,
+            height: 5,
+            cssColor: "blue"
+    })
     c.pointDown.add((ev) => {
         card.willExchange();
+        group.append(mark);
     });
-    return c
+    return group;
 }
 
 function getAllIndexes(arr) {
@@ -123,13 +135,17 @@ function getAllIndexes(arr) {
 }
 
 
-function exchangeCard(cardSprites, fieldCards, scene, deck) {
+function exchangeCard(group_sprites, fieldCards, scene, deck) {
     let exchange_index = getAllIndexes(fieldCards);
 
     for (let i = 0; i < exchange_index.length; i++) {
         let ind = exchange_index[i];
-        var c = cardSprites[ind];
+        var gp = group_sprites[ind]
+        var c = gp.children[0];
         c.surface = g.Util.asSurface(scene.assets[deck.getFirstCard().viewAsCard()]);
+        var mark = gp.children[1];
+        mark.cssColor = "transparent";
+        mark.modified();
         c.modified();
     }
 }
