@@ -26,6 +26,6 @@ class CardDeck {
     getFirstCard() {
         return this.cards.pop();
     }
-};
+}
 
 module.exports = CardDeck;

@@ -7,7 +7,7 @@ function main() {
     var fieldCards = [];
     for (i = 0; i < 5; i++) {
         fieldCards.push(deck.getFirstCard());
-    };
+    }
     var scene = new g.Scene(
         {
             game: g.game,
@@ -67,19 +67,17 @@ function main() {
             ]
         }
     );
-    scene.loaded.add(function() {
 
-
-
+    scene.loaded.add(function () {
         for (let i = 0; i < fieldCards.length; i++) {
-            let card = createFieldCards(fieldCards[i], scene, 5 + i * 120, 5)
+            let card = createFieldCards(fieldCards[i], scene, deck, 5 + i * 120, 5);
             scene.append(card);
         }
     });
     g.game.pushScene(scene);
 }
 
-function createFieldCards(card, scene, x, y) {
+function createFieldCards(card, scene, deck, x, y) {
     console.log(card.viewAsCard());
     const c = new g.Sprite({
         scene: scene,
@@ -87,12 +85,13 @@ function createFieldCards(card, scene, x, y) {
         touchable: true,
         x: x,
         y: y,
-    })
+    });
     console.log(c);
     c.pointDown.add(() => {
-        c.surface =  g.Util.asSurface(scene.assets["card_spade_13"]);
+        let next_card = deck.getFirstCard();
+        c.surface = g.Util.asSurface(scene.assets[next_card.viewAsCard()]);
         c.modified();
-    })
+    });
     return c
 }
 
