@@ -109,7 +109,6 @@ function createFieldCards(card, scene, deck, x, y) {
     });
     c.pointDown.add((ev) => {
         card.willExchange();
-        scene.append(rect);
     });
     return c
 }
