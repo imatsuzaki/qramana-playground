@@ -1,4 +1,4 @@
-var Card = require("Card");
+let Card = require("Card");
 
 class CardDeck {
     constructor(cards) {
@@ -6,8 +6,8 @@ class CardDeck {
     }
     static initDeck() {
         let marks = ['spade', 'diamond', 'club', 'heart'];
-        var _cards = [];
-        for (var i = 0; i < marks.length; i++) {
+        let _cards = [];
+        for (let i = 0; i < marks.length; i++) {
             for (let j = 0; j < 13; j++) {
                 let c = new Card(marks[i], j + 1);
                 _cards.push(c);
@@ -16,9 +16,9 @@ class CardDeck {
         return new this(_cards);
     }
     shuffle() {
-        for(var i = this.cards.length - 1; i > 0; i--){
-            var r = Math.floor(Math.random() * (i + 1));
-            var tmp = this.cards[i];
+        for(let i = this.cards.length - 1; i > 0; i--){
+            let r = Math.floor(Math.random() * (i + 1));
+            let tmp = this.cards[i];
             this.cards[i] = this.cards[r];
             this.cards[r] = tmp;
         }

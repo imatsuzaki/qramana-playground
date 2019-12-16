@@ -1,15 +1,15 @@
-var CardDeck = require("CardDeck");
-var constants = require("constants");
+let CardDeck = require("CardDeck");
+let constants = require("constants");
 
 function main() {
 
-    var deck = CardDeck.initDeck();
+    let deck = CardDeck.initDeck();
     deck.shuffle();
-    var fieldCards = [];
-    for (i = 0; i < 5; i++) {
+    let fieldCards = [];
+    for (let i = 0; i < 5; i++) {
         fieldCards.push(deck.getFirstCard());
     }
-    var scene = new g.Scene(
+    let scene = new g.Scene(
         {
             game: g.game,
             assetIds: constants.cardIds
@@ -27,7 +27,7 @@ function main() {
             scene.append(card_sprites[i]);
         }
 
-        var rect = new g.FilledRect({
+        let rect = new g.FilledRect({
             scene: scene,
             x: 500,
             y: 400,
@@ -48,7 +48,7 @@ function main() {
 
 function createFieldCards(card, scene, x, y) {
 
-    var group = new g.E({scene: scene});
+    let group = new g.E({scene: scene});
     const c = new g.Sprite({
         scene: scene,
         src: scene.assets[card.viewAsCard()],
@@ -64,7 +64,7 @@ function createFieldCards(card, scene, x, y) {
             width: 113,
             height: 5,
             cssColor: "blue"
-    })
+    });
     c.pointDown.add((ev) => {
         card.willExchange();
         group.append(mark);
@@ -74,7 +74,7 @@ function createFieldCards(card, scene, x, y) {
 
 function getAllIndexes(arr) {
     console.log(arr);
-    var indexes = [], i;
+    let indexes = [], i;
     for (i = 0; i < arr.length; i++)
         if (arr[i].exchange)
             indexes.push(i);
@@ -87,10 +87,10 @@ function exchangeCard(group_sprites, fieldCards, scene, deck) {
 
     for (let i = 0; i < exchange_index.length; i++) {
         let ind = exchange_index[i];
-        var gp = group_sprites[ind]
-        var c = gp.children[0];
+        let gp = group_sprites[ind];
+        let c = gp.children[0];
         c.surface = g.Util.asSurface(scene.assets[deck.getFirstCard().viewAsCard()]);
-        var mark = gp.children[1];
+        let mark = gp.children[1];
         mark.cssColor = "transparent";
         mark.modified();
         c.modified();
