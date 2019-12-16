@@ -330,6 +330,11 @@
 			"width": 113,
 			"height": 166,
 			"path": "image/card_heart_9.png"
+		},
+		"constants": {
+			"type": "script",
+			"path": "script/constants.js",
+			"global": true
 		}
 	},
 	"environment": {
