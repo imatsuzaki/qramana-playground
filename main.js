@@ -40,40 +40,13 @@ function main() {
         rect.pointDown.add(function () {
             rect.cssColor = "red";
             rect.modified();
-            exchangeCard(card_sprites, fieldCards, scene, deck);
+            fieldCards.exchangeCard(card_sprites, scene, deck);
 
-            console.log("========= Last filed cards ============");
-            console.log(fieldCards.cards);
-            console.log('=======================================')
+            console.log(fieldCards.judgePoint());
         });
         scene.append(rect);
     });
     g.game.pushScene(scene);
-}
-
-
-function getAllIndexes(arr) {
-    let indexes = [], i;
-    for (i = 0; i < arr.length; i++)
-        if (arr[i].exchange)
-            indexes.push(i);
-    return indexes;
-}
-
-
-function exchangeCard(group_sprites, fieldCards, scene, deck) {
-    let exchange_index = getAllIndexes(fieldCards.cards);
-
-    for (let i = 0; i < exchange_index.length; i++) {
-        let ind = exchange_index[i];
-        let gp = group_sprites[ind];
-        let c = gp.children[0];
-        c.surface = g.Util.asSurface(scene.assets[deck.getFirstCard().viewAsCard()]);
-        let mark = gp.children[1];
-        mark.cssColor = "transparent";
-        mark.modified();
-        c.modified();
-    }
 }
 
 module.exports = main;
