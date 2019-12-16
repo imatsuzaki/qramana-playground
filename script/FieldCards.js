@@ -64,25 +64,25 @@ class FieldCards {
             if (a.value > b.value) return -1;
             return 0;
         });
-        const maxSuited = counts[0].value;
-        const secondSuited = counts[1].value;
+        const maxHit = counts[0].value;
+        const secondHit = counts[1].value;
 
+        // TODO Royal flush
         if (isFlush && isStraight) {
-            // TODO Royal flush
             return 'straight flush';
-        } else if (maxSuited === 4) {
+        } else if (maxHit === 4) {
             return 'quads';
-        } else if (maxSuited === 3 && secondSuited === 2) {
+        } else if (maxHit === 3 && secondHit === 2) {
             return 'full house';
         } else if (isFlush) {
             return 'flush';
         } else if (isStraight) {
             return 'straight';
-        } else if (maxSuited === 3) {
+        } else if (maxHit === 3) {
             return 'trips';
-        } else if (maxSuited === 2 && secondSuited === 2) {
+        } else if (maxHit === 2 && secondHit === 2) {
             return 'two pair';
-        } else if (maxSuited === 2) {
+        } else if (maxHit === 2) {
             return 'pair';
         } else {
             return 'non';
