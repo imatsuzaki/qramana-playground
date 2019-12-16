@@ -42,9 +42,27 @@ function main() {
             rect.modified();
             fieldCards.exchangeCard(card_sprites, scene, deck);
 
+            const judge = fieldCards.judgePoint();
+            var font = new g.DynamicFont({
+                game: g.game,
+                fontFamily: g.FontFamily.Serif,
+                size: 30
+            });
+            var label = new g.Label({
+                scene: scene,
+                font: font,
+                text: judge,
+                fontSize: 30,
+                textColor: "blue",
+                x: 255,
+                y: 250
+            });
+            scene.append(label);
             console.log(fieldCards.judgePoint());
         });
         scene.append(rect);
+
+
     });
     g.game.pushScene(scene);
 }
