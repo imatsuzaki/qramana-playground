@@ -1,13 +1,14 @@
 let CardDeck = require("CardDeck");
 let constants = require("constants");
+let FieldCards = require("FieldCards");
 
 function main() {
 
     let deck = CardDeck.initDeck();
     deck.shuffle();
-    let fieldCards = [];
+    let fieldCards = new FieldCards([]);
     for (let i = 0; i < 5; i++) {
-        fieldCards.push(deck.getFirstCard());
+        fieldCards.addCardToLast(deck.getFirstCard());
     }
     let scene = new g.Scene(
         {
@@ -18,8 +19,8 @@ function main() {
 
     scene.loaded.add(function () {
         let card_sprites = [];
-        for (let i = 0; i < fieldCards.length; i++) {
-            let card = createFieldCards(fieldCards[i], scene, 5 + i * 120, 5);
+        for (let i = 0; i < fieldCards.getLength(); i++) {
+            let card = fieldCards.getByIndex(i).toSprites(scene, 5 + i * 120, 5);
             card_sprites.push(card);
         }
 
@@ -40,40 +41,18 @@ function main() {
             rect.cssColor = "red";
             rect.modified();
             exchangeCard(card_sprites, fieldCards, scene, deck);
+
+            console.log("========= Last filed cards ============");
+            console.log(fieldCards.cards);
+            console.log('=======================================')
         });
         scene.append(rect);
     });
     g.game.pushScene(scene);
 }
 
-function createFieldCards(card, scene, x, y) {
-
-    let group = new g.E({scene: scene});
-    const c = new g.Sprite({
-        scene: scene,
-        src: scene.assets[card.viewAsCard()],
-        touchable: true,
-        x: x,
-        y: y,
-    });
-    group.append(c);
-    const mark = new g.FilledRect({
-        scene: scene,
-            x: x,
-            y: y,
-            width: 113,
-            height: 5,
-            cssColor: "blue"
-    });
-    c.pointDown.add((ev) => {
-        card.willExchange();
-        group.append(mark);
-    });
-    return group;
-}
 
 function getAllIndexes(arr) {
-    console.log(arr);
     let indexes = [], i;
     for (i = 0; i < arr.length; i++)
         if (arr[i].exchange)
@@ -83,7 +62,7 @@ function getAllIndexes(arr) {
 
 
 function exchangeCard(group_sprites, fieldCards, scene, deck) {
-    let exchange_index = getAllIndexes(fieldCards);
+    let exchange_index = getAllIndexes(fieldCards.cards);
 
     for (let i = 0; i < exchange_index.length; i++) {
         let ind = exchange_index[i];

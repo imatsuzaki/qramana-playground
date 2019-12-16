@@ -335,6 +335,11 @@
 			"type": "script",
 			"path": "script/constants.js",
 			"global": true
+		},
+		"FieldCards": {
+			"type": "script",
+			"path": "script/FieldCards.js",
+			"global": true
 		}
 	},
 	"environment": {
