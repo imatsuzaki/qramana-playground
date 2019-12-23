@@ -1,17 +1,14 @@
+let q = require("@qramana/qramana");
+
 class Card {
     constructor(mark, num) {
         this.mark = mark;
         this.num = num;
-        this.exchange = false;
+        this.qState = new q.Qubit({value: 0});
     }
 
-    viewAsCard() {
+    viewAsAssetId() {
         return "card_" + this.mark + "_" + this.num.toString();
-    }
-
-    willExchange() {
-        console.log("Will Exchange", this.viewAsCard());
-        this.exchange = true;
     }
 
     toSprites(scene, x, y) {
@@ -34,7 +31,8 @@ class Card {
             cssColor: "blue"
         });
         cardUi.pointDown.add(ev => {
-            this.willExchange();
+            this.qState.x();
+            console.log(this.qState.toString());
             touchableCardUi.append(selectedBar);
         });
         return touchableCardUi

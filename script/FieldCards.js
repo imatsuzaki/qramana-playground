@@ -18,9 +18,11 @@ class FieldCards {
     // TODO Need refactor. Use filter and foreach.
     exchangeCard(sprites, scene, deck) {
         let exchange_indices = [], i;
-        for (i = 0; i < this.getLength(); i++)
-            if (this.cards[i].exchange)
+        for (i = 0; i < this.getLength(); i++) {
+            let observe = this.cards[i].qState.measure();
+            if (observe === 1)
                 exchange_indices.push(i);
+        }
 
         for (let i = 0; i < exchange_indices.length; i++) {
             let ind = exchange_indices[i];
@@ -28,7 +30,7 @@ class FieldCards {
             let c = s.children[0];
             let new_card = deck.getFirstCard();
             this.cards[ind] = new_card;
-            c.surface = g.Util.asSurface(scene.assets[new_card.viewAsCard()]);
+            c.surface = g.Util.asSurface(scene.assets[new_card.viewAsAssetId()]);
             let mark = s.children[1];
             mark.cssColor = "transparent";
             mark.modified();
