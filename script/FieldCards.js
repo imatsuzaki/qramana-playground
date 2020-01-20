@@ -1,5 +1,3 @@
-const q = require("@qramana/qramana");
-
 class FieldCards {
     constructor(cards) {
         this.cards = cards;
