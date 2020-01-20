@@ -18,15 +18,6 @@ class FieldCards {
     exchangeCard(scene, deck) {
         for (let i = 0; i < this.getLength(); i++) {
             let c = this.cards[i];
-
-            if (i === 0) {
-                console.log("Measure");
-                for (let j = 0; j < 10; j++) {
-                    console.log(c.qState.toString());
-                    console.log(c.qState.measure());
-                }
-            }
-
             if (c.qState.measure() === 1) {
                 scene.remove(c.sprite);
                 let newCard = deck.getFirstCard();
