@@ -15,26 +15,27 @@ class FieldCards {
         return this.cards[i];
     }
 
-    // TODO Need refactor. Use filter and foreach.
-    exchangeCard(sprites, scene, deck) {
-        let exchange_indices = [], i;
-        for (i = 0; i < this.getLength(); i++) {
-            let observe = this.cards[i].qState.measure();
-            if (observe === 1)
-                exchange_indices.push(i);
-        }
+    exchangeCard(scene, deck) {
+        for (let i = 0; i < this.getLength(); i++) {
+            let c = this.cards[i];
 
-        for (let i = 0; i < exchange_indices.length; i++) {
-            let ind = exchange_indices[i];
-            let s = sprites[ind];
-            let c = s.children[0];
-            let new_card = deck.getFirstCard();
-            this.cards[ind] = new_card;
-            c.surface = g.Util.asSurface(scene.assets[new_card.viewAsAssetId()]);
-            let mark = s.children[1];
-            mark.cssColor = "transparent";
-            mark.modified();
-            c.modified();
+            if (i === 0) {
+                console.log("Measure");
+                for (let j = 0; j < 10; j++) {
+                    console.log(c.qState.toString());
+                    console.log(c.qState.measure());
+                }
+            }
+
+            if (c.qState.measure() === 1) {
+                scene.remove(c.sprite);
+                let newCard = deck.getFirstCard();
+                newCard.x = c.x;
+                newCard.y = c.y;
+                newCard.toSprites(scene, c.x, c.y);
+                this.cards[i] = newCard;
+                scene.append(newCard.sprite);
+            }
         }
     }
 
@@ -90,8 +91,6 @@ class FieldCards {
             return 'non';
         }
     }
-
-
 }
 
 module.exports = FieldCards;

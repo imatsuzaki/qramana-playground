@@ -361,11 +361,15 @@
 		"node_modules/jsqubits/dist/commonjs/constants.js",
 		"node_modules/jsqubits/dist/commonjs/index.js",
 		"node_modules/jsqubits/dist/commonjs/utils/typecheck.js",
-		"node_modules/jsqubits/dist/commonjs/utils/validateArgs.js"
+		"node_modules/jsqubits/dist/commonjs/utils/validateArgs.js",
+		"node_modules/loadsh/lodash.js",
+		"node_modules/jquery/dist/jquery.js"
 	],
 	"moduleMainScripts": {
 		"@qramana/qramana-common-types": "node_modules/@qramana/qramana-common-types/lib/index.js",
 		"@qramana/qramana": "node_modules/@qramana/qramana/lib/index.js",
-		"jsqubits": "node_modules/jsqubits/dist/commonjs/index.js"
+		"jsqubits": "node_modules/jsqubits/dist/commonjs/index.js",
+		"loadsh": "node_modules/loadsh/lodash.js",
+		"jquery": "node_modules/jquery/dist/jquery.js"
 	}
 }

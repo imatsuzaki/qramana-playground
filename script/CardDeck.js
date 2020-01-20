@@ -4,12 +4,12 @@ class CardDeck {
     constructor(cards) {
         this.cards = cards;
     }
-    static initDeck() {
+    static initDeck(scene) {
         let marks = ['spade', 'diamond', 'club', 'heart'];
         let _cards = [];
         for (let i = 0; i < marks.length; i++) {
             for (let j = 0; j < 13; j++) {
-                let c = new Card(marks[i], j + 1);
+                let c = new Card(marks[i], j + 1, scene);
                 _cards.push(c);
             }
         }

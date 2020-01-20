@@ -11,6 +11,10 @@
     "@akashic/akashic-sandbox": "~0.13.55"
   },
   "dependencies": {
-    "@qramana/qramana": "0.0.4"
+    "@qramana/qramana": "0.0.4",
+    "akashic": "0.0.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.4.1",
+    "loadsh": "0.0.4"
   }
 }
