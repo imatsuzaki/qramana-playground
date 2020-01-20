@@ -1,3 +1,5 @@
+const q = require("@qramana/qramana");
+
 class FieldCards {
     constructor(cards) {
         this.cards = cards;
@@ -17,13 +19,15 @@ class FieldCards {
 
     exchangeCard(scene, deck) {
         for (let i = 0; i < this.getLength(); i++) {
-            let c = this.cards[i];
-            if (c.qState.measure() === 1) {
-                scene.remove(c.sprite);
+            let card = this.cards[i];
+            let _c = card.qState.simulated.clone();
+            let cloneQubit = _c.qubits[_c.index];
+            if (cloneQubit.measure() === 1) {
+                scene.remove(card.sprite);
                 let newCard = deck.getFirstCard();
-                newCard.x = c.x;
-                newCard.y = c.y;
-                newCard.toSprites(scene, c.x, c.y);
+                newCard.x = card.x;
+                newCard.y = card.y;
+                newCard.toSprites(scene, card.x, card.y);
                 this.cards[i] = newCard;
                 scene.append(newCard.sprite);
             }

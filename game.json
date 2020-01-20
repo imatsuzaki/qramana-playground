@@ -346,6 +346,7 @@
 		"sandbox-runtime": "2"
 	},
 	"globalScripts": [
+		"node_modules/loadsh/lodash.js",
 		"node_modules/@qramana/qramana-common-types/lib/QuantumState.js",
 		"node_modules/@qramana/qramana-common-types/lib/index.js",
 		"node_modules/@qramana/qramana/lib/Core.js",
@@ -353,6 +354,7 @@
 		"node_modules/@qramana/qramana/lib/Qubit.js",
 		"node_modules/@qramana/qramana/lib/index.js",
 		"node_modules/@qramana/qramana/lib/methods.js",
+		"node_modules/@qramana/qramana/lib/qlib/Util.js",
 		"node_modules/@qramana/qramana/lib/types.js",
 		"node_modules/jsqubits/dist/commonjs/Complex.js",
 		"node_modules/jsqubits/dist/commonjs/Measurement.js",
@@ -361,15 +363,12 @@
 		"node_modules/jsqubits/dist/commonjs/constants.js",
 		"node_modules/jsqubits/dist/commonjs/index.js",
 		"node_modules/jsqubits/dist/commonjs/utils/typecheck.js",
-		"node_modules/jsqubits/dist/commonjs/utils/validateArgs.js",
-		"node_modules/loadsh/lodash.js",
-		"node_modules/jquery/dist/jquery.js"
+		"node_modules/jsqubits/dist/commonjs/utils/validateArgs.js"
 	],
 	"moduleMainScripts": {
+		"loadsh": "node_modules/loadsh/lodash.js",
 		"@qramana/qramana-common-types": "node_modules/@qramana/qramana-common-types/lib/index.js",
 		"@qramana/qramana": "node_modules/@qramana/qramana/lib/index.js",
-		"jsqubits": "node_modules/jsqubits/dist/commonjs/index.js",
-		"loadsh": "node_modules/loadsh/lodash.js",
-		"jquery": "node_modules/jquery/dist/jquery.js"
+		"jsqubits": "node_modules/jsqubits/dist/commonjs/index.js"
 	}
 }

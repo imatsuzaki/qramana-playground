@@ -98,18 +98,18 @@
       }
     },
     "@qramana/qramana": {
-      "version": "0.0.4",
-      "resolved": "https://registry.npmjs.org/@qramana/qramana/-/qramana-0.0.4.tgz",
-      "integrity": "sha512-9yQv+PwrCOcPBVvznKBwARcx/qP78h5VmICzuoKy4T3B9sJRa0xz164DvyCzBWwzH7qAnaAUnUlq2xdRdm2X9g==",
+      "version": "0.0.5",
+      "resolved": "https://registry.npmjs.org/@qramana/qramana/-/qramana-0.0.5.tgz",
+      "integrity": "sha512-md7EtKXhbT9QG1FMwnSneBY3g1UI0CZ3SJloIl8rPtCdKNUVTQXePRrj7ZY7rA09AmtCZrYBJrOb/OZrePq+ng==",
       "requires": {
-        "@qramana/qramana-common-types": "0.0.1",
+        "@qramana/qramana-common-types": "0.0.3",
         "jsqubits": "^1.1.1"
       }
     },
     "@qramana/qramana-common-types": {
-      "version": "0.0.1",
-      "resolved": "https://registry.npmjs.org/@qramana/qramana-common-types/-/qramana-common-types-0.0.1.tgz",
-      "integrity": "sha512-Pc+bZWiaw5QNvN8EtkNMV7UnbWb6puKJSdZXx0rB8xavSXRiN+Wmp4EPtyCOBYI8w1EikM7GQngNZyd5OUoPNg=="
+      "version": "0.0.3",
+      "resolved": "https://registry.npmjs.org/@qramana/qramana-common-types/-/qramana-common-types-0.0.3.tgz",
+      "integrity": "sha512-1c2WzgefqYhmMF6gl5sDcdrru4EL/elmfdpBKwq+uhZDXebDeTYSdyi6CnJ3kcMG+wr0p4pezzyHHXdxhyTFcg=="
     },
     "JSONStream": {
       "version": "1.3.5",
@@ -1830,11 +1830,6 @@
       "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
       "integrity": "sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=",
       "dev": true
-    },
-    "jquery": {
-      "version": "3.4.1",
-      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.4.1.tgz",
-      "integrity": "sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw=="
     },
     "js-sha256": {
       "version": "0.9.0",
